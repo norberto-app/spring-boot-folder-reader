@@ -1,12 +1,10 @@
 package com.example.napp.filereader.controller
 
 import com.example.napp.filereader.data.model.Process
-import com.example.napp.filereader.data.model.ProcessStatus
 import com.example.napp.filereader.data.model.Progress
 import com.example.napp.filereader.data.repository.ProcessRepository
 import com.example.napp.filereader.exception.ProcessNotFoundException
 import jakarta.validation.constraints.Positive
-import jakarta.validation.constraints.Digits
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value
@@ -16,9 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import java.time.Instant
-import kotlin.random.Random
-
-// POST hht://localhost:8080/process/start
 
 @RestController
 @Validated

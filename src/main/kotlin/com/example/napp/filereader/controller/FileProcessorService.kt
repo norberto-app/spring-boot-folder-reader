@@ -148,7 +148,7 @@ class FileProcessorService(
 
                     // Small delay to simulate realistic processing time
                     try {
-                        delay(100000)
+                        delay(1000)
                         ensureActive()
                     } catch (exception: CancellationException) {
                         throw exception // Re-throw to properly handle cancellation

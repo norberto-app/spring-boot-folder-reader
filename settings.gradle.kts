@@ -1,1 +1,1 @@
-rootProject.name = "spring-boot-crash-course"
+rootProject.name = "spring-boot-folder-reader"
