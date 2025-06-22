@@ -1,0 +1,7 @@
+package com.example.napp.filereader.exception
+
+import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.ResponseStatus
+
+@ResponseStatus(HttpStatus.NOT_FOUND)
+class ProcessNotFoundException(val processId: Int) : RuntimeException()
