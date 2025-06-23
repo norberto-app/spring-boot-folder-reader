@@ -19,6 +19,7 @@ import java.util.concurrent.atomic.AtomicLong
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.cancellation.CancellationException
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.seconds
 
 /**
  * File Processing Service
@@ -146,9 +147,10 @@ class FileProcessorService(
                     process.progress = currentProgress
                     progressCallback.invoke(currentProgress)
 
-                    // Small delay to simulate realistic processing time
                     try {
-                        delay(1000)
+                        // Small delay to simulate realistic processing time
+                        delay(15.seconds)
+
                         ensureActive()
                     } catch (exception: CancellationException) {
                         throw exception // Re-throw to properly handle cancellation
@@ -223,7 +225,6 @@ class FileProcessorService(
         var fileName = ""
 
         withContext(Dispatchers.IO) {
-
             // Check for cancellation before processing
             ensureActive()
 
